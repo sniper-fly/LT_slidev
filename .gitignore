@@ -2,3 +2,5 @@ node_modules
 dist
 .slidev
 *.local
+.review
+.DS_Store

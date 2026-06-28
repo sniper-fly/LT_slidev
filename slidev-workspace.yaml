@@ -1,0 +1,12 @@
+baseUrl: /LT_slidev
+
+hero:
+  title: sniper-fly's LT Slides
+  description: sniper-fly の LT スライド集
+
+sidebar:
+  title: sniper-fly's LT Slides
+  githubUrl: https://github.com/sniper-fly/LT_slidev
+
+exclude:
+  - _template

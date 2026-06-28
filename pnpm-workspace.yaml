@@ -1,2 +1,5 @@
+packages:
+  - "slides/*"
+
 ignoredBuiltDependencies:
   - esbuild

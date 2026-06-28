@@ -1,14 +1,18 @@
 {
-  "name": "streaming-jinarashi-slides",
+  "name": "lt-slidev",
+  "version": "0.0.0",
   "private": true,
+  "type": "module",
   "packageManager": "pnpm@10.18.0",
   "scripts": {
-    "dev": "slidev",
-    "build": "slidev build",
-    "export": "slidev export"
+    "dev": "slidev-workspace preview",
+    "build": "slidev-workspace build",
+    "export-og": "slidev-workspace export-og"
   },
   "dependencies": {
-    "@slidev/cli": "^51.0.0",
-    "@slidev/theme-default": "latest"
+    "slidev-workspace": "^0.9.3"
+  },
+  "devDependencies": {
+    "playwright-chromium": "^1.56.1"
   }
 }
