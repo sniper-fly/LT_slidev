@@ -2,5 +2,7 @@ node_modules
 dist
 .slidev
 *.local
+.claude/settings.local.json
 .review
 .DS_Store
+.prompt.md
