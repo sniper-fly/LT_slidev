@@ -1,0 +1,14 @@
+{
+  "name": "applying-loop-engineering-for-slidev",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "slidev build",
+    "dev": "slidev --base /applying-loop-engineering-for-slidev/",
+    "export": "slidev export"
+  },
+  "dependencies": {
+    "@slidev/cli": "^51.0.0",
+    "@slidev/theme-default": "latest"
+  }
+}

@@ -1,0 +1,91 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="workflow" id="workflow">
+    <mxGraphModel dx="1780" dy="650" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1780" pageHeight="700" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- ② 環境改善ループ (outer dashed box, encloses n2 + goalLoop + retro) -->
+        <mxCell id="envLoop" value="② 環境改善ループ" style="rounded=1;dashed=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#67e8f9;fontColor=#67e8f9;verticalAlign=top;align=left;spacingLeft=20;fontSize=36;fontStyle=1;arcSize=4;spacingTop=12;" vertex="1" parent="1">
+          <mxGeometry x="300" y="80" width="1080" height="560" as="geometry" />
+        </mxCell>
+
+        <!-- ① 目標達成ループ (inner dashed box, nested inside envLoop, encloses n3 + n4) -->
+        <mxCell id="goalLoop" value="① 目標達成ループ" style="rounded=1;dashed=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#4ade80;fontColor=#4ade80;verticalAlign=top;align=left;spacingLeft=20;fontSize=28;fontStyle=1;arcSize=4;spacingTop=10;" vertex="1" parent="1">
+          <mxGeometry x="700" y="150" width="620" height="250" as="geometry" />
+        </mxCell>
+
+        <!-- n1: 素材収集・問題発見 (outside both loops) -->
+        <mxCell id="n1" value="① 素材収集・問題発見&#10;[人間 Pilot]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1e3a5f;strokeColor=#60a5fa;fontColor=#ffffff;fontSize=30;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="40" y="205" width="220" height="140" as="geometry" />
+        </mxCell>
+
+        <!-- n2: アウトライン (inside envLoop) -->
+        <mxCell id="n2" value="② アウトライン&#10;[人間 Pilot + AI Copilot]&#10;&#10;Skill: slide-outline" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1e3a5f;strokeColor=#60a5fa;fontColor=#ffffff;fontSize=23;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="340" y="205" width="300" height="140" as="geometry" />
+        </mxCell>
+
+        <!-- n3: 実装 (inside goalLoop) -->
+        <mxCell id="n3" value="③ 実装&#10;[AI Pilot]&#10;&#10;Skill: slide-implement" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#14532d;strokeColor=#4ade80;fontColor=#ffffff;fontSize=23;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="730" y="200" width="230" height="150" as="geometry" />
+        </mxCell>
+
+        <!-- n4: レビュー (inside goalLoop) -->
+        <mxCell id="n4" value="④ レビュー&#10;[AI Copilot]&#10;&#10;Skill: slide-review" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#14532d;strokeColor=#4ade80;fontColor=#ffffff;fontSize=23;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="200" width="250" height="150" as="geometry" />
+        </mxCell>
+
+        <!-- 振り返り (inside envLoop, below n2 + goalLoop) -->
+        <mxCell id="retro" value="振り返り&#10;&#10;Skill: retro" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#7c2d12;strokeColor=#fb923c;fontColor=#ffffff;fontSize=28;fontStyle=1;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="340" y="460" width="980" height="150" as="geometry" />
+        </mxCell>
+
+        <!-- n5: 人間メタ観察者 (outside envLoop) -->
+        <mxCell id="n5" value="⑤ 人間: メタ観察者" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#3b2f5e;strokeColor=#a78bfa;fontColor=#ffffff;fontSize=28;fontStyle=1;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="1440" y="205" width="300" height="140" as="geometry" />
+        </mxCell>
+
+        <!-- Sequential arrows -->
+        <mxCell id="e1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#e5e7eb;strokeWidth=3;endArrow=block;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="n1" target="n2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#e5e7eb;strokeWidth=3;endArrow=block;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="n2" target="n3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#e5e7eb;strokeWidth=3;endArrow=block;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="n3" target="n4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" value="反復" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#4ade80;strokeWidth=3;endArrow=block;exitX=0;exitY=0.75;entryX=1;entryY=0.75;fontColor=#4ade80;fontSize=20;labelBackgroundColor=#0f172a;" edge="1" parent="1" source="n4" target="n3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- 振り返りの結果を ②③④ それぞれに反映 (環境改善)。各ノードの中心 x に揃えて直線にする -->
+        <mxCell id="r1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#fb923c;strokeWidth=2.5;dashed=1;dashPattern=5 4;endArrow=block;exitX=0.153;exitY=0;entryX=0.5;entryY=1;" edge="1" parent="1" source="retro" target="n2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#fb923c;strokeWidth=2.5;dashed=1;dashPattern=5 4;endArrow=block;exitX=0.515;exitY=0;entryX=0.5;entryY=1;" edge="1" parent="1" source="retro" target="n3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#fb923c;strokeWidth=2.5;dashed=1;dashPattern=5 4;endArrow=block;exitX=0.801;exitY=0;entryX=0.5;entryY=1;" edge="1" parent="1" source="retro" target="n4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- 人間 (n5) から目標達成ループへ: 右側から直接、中心 y を揃えて直線にする -->
+        <mxCell id="h1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#c4b5fd;strokeWidth=2.5;dashed=1;dashPattern=6 4;endArrow=open;exitX=0;exitY=0.5;entryX=1;entryY=0.5;" edge="1" parent="1" source="n5" target="goalLoop">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- 人間 (n5) から環境改善ループへ: 上側を迂回するルート -->
+        <mxCell id="h2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#c4b5fd;strokeWidth=2.5;dashed=1;dashPattern=6 4;endArrow=open;exitX=0.5;exitY=0;entryX=0.9;entryY=0;" edge="1" parent="1" source="n5" target="envLoop">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1590" y="30" />
+              <mxPoint x="1272" y="30" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

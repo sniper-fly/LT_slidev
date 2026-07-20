@@ -25,6 +25,15 @@ importers:
         specifier: latest
         version: 0.25.0
 
+  slides/applying-loop-engineering-for-slidev:
+    dependencies:
+      '@slidev/cli':
+        specifier: ^51.0.0
+        version: 51.8.2(@babel/parser@7.29.0)(@nuxt/kit@3.21.1)(@types/markdown-it@14.1.2)(@types/node@22.19.11)(@vue/compiler-sfc@3.5.28)(lightningcss@1.32.0)(markdown-it-async@2.2.0)(playwright-chromium@1.61.1)(postcss@8.5.6)
+      '@slidev/theme-default':
+        specifier: latest
+        version: 0.25.0
+
   slides/dokusen-anime-kuchiku:
     dependencies:
       '@slidev/cli':
