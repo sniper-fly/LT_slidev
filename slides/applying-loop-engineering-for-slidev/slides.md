@@ -60,20 +60,25 @@ layout: full
 
 <div class="text-5xl font-bold shrink-0">スライド作り、めんどくさくないですか</div>
 
-<div class="flex-1 flex flex-col justify-center text-3xl leading-relaxed space-y-16">
+<div class="flex-1 flex flex-col items-center justify-center gap-12">
 
-<v-clicks>
+<div class="grid grid-cols-2 gap-8 w-full px-16">
 
-- LT はやりたいけど、スライド作りの面倒さで腰が引ける
-- パワポでポチポチと配置を合わせる
-- レイアウト崩れを都度手で直す
+<div class="bg-blue-900/30 border border-blue-500/40 rounded-lg px-8 py-10 text-3xl text-center">
+配置調整<br><span class="text-2xl opacity-70">マウスでポチポチ</span>
+</div>
 
-</v-clicks>
+<div class="bg-blue-900/30 border border-blue-500/40 rounded-lg px-8 py-10 text-3xl text-center">
+差分管理が<br>できない
+</div>
+
+</div>
 
 </div>
 </div>
 
 <!--
+LT はやりたいけど面倒で腰が引ける、という前置きは口頭で添える。
 共感フックとして短く済ませる。次スライドの「AIで解決すればいい」への振りになる。
 -->
 
@@ -83,21 +88,27 @@ layout: full
 
 <div class="text-5xl font-bold shrink-0">AI と Slidev で解決すればいいのでは?</div>
 
-<div class="flex-1 flex flex-col justify-center text-3xl leading-relaxed space-y-10">
+<div class="flex-1 flex flex-col items-center justify-center gap-8">
 
-<v-clicks>
+<div class="flex items-center justify-center gap-6">
 
-- <strong>Slidev とは</strong>: Markdown だけでスライドが書ける <span class="whitespace-nowrap">OSS フレームワーク</span><br>
-  <span class="text-xl opacity-70">(コードのシンタックスハイライトや <span class="whitespace-nowrap">Vue コンポーネント</span>の埋め込みなど、<span class="whitespace-nowrap">開発者向け</span>の機能を持つ)</span>
-- AI に書かせれば、自動でいい感じにしてくれるはず
+<div class="bg-blue-900/30 border border-blue-500/40 rounded-lg px-10 py-8 text-3xl text-center"><span class="whitespace-nowrap">Markdown/コード</span></div>
+<div class="text-4xl opacity-60">→</div>
+<div class="bg-green-900/30 border border-green-500/40 rounded-lg px-10 py-8 text-3xl text-center">Slidev</div>
+<div class="text-4xl opacity-60">→</div>
+<div class="bg-purple-900/30 border border-purple-500/40 rounded-lg px-10 py-8 text-3xl text-center"><span class="whitespace-nowrap">スライド</span></div>
 
-</v-clicks>
+</div>
+
+<div class="text-2xl opacity-70 text-center">Slidev: <span class="whitespace-nowrap">Markdown やコードからスライドを作れる</span><br><span class="whitespace-nowrap">(Vue コンポーネントの埋め込みも可能)</span></div>
+
+<div class="text-3xl opacity-80 text-center">ここを AI が書けば自動でできるはず</div>
 
 </div>
 </div>
 
 <!--
-この「はず」が次のスライドで裏切られる。装飾は入れず、期待感だけを素朴に提示する。
+この「はず」が次のスライドで裏切られる、と匂わせてもよい。
 -->
 
 ---
@@ -123,14 +134,23 @@ layout: full
 
 <div class="text-5xl font-bold shrink-0">AI の手直しという別の仕事が生まれる</div>
 
-<div class="flex-1 flex flex-col justify-center text-3xl leading-relaxed space-y-10">
+<div class="flex-1 flex flex-col items-center justify-center gap-12">
 
-<v-clicks>
+<div class="grid gap-8 w-full px-16 items-center" style="grid-template-columns: 1fr auto 1fr;">
 
-- 崩れたレイアウトを直すよう、AI に<span class="whitespace-nowrap">指示を出し直す羽目になる</span>
-- 最近提唱されている<span class="whitespace-nowrap">"ループエンジニアリング"</span>という<span class="whitespace-nowrap">考え方を、スライド作成にも適用</span>してみる
+<div class="bg-blue-900/30 border border-blue-500/40 rounded-lg px-8 py-10 text-3xl text-center">
+配置調整の面倒
+</div>
 
-</v-clicks>
+<div class="text-4xl opacity-60">⇄</div>
+
+<div class="bg-orange-900/30 border border-orange-500/40 rounded-lg px-8 py-10 text-3xl text-center">
+<span class="whitespace-nowrap">AI への指示し直しの面倒</span>
+</div>
+
+</div>
+
+<div class="text-3xl opacity-80 text-center">面倒さの場所が移動しただけ</div>
 
 </div>
 </div>
@@ -144,47 +164,22 @@ layout: full
 
 <div class="h-full flex flex-col">
 
-<div class="text-5xl font-bold shrink-0">ループエンジニアリングとは</div>
+<div class="text-5xl font-bold shrink-0">AI を真に活かすには</div>
 
-<div class="flex-1 flex flex-col justify-center text-2xl">
+<div class="flex-1 flex flex-col justify-center text-3xl leading-relaxed space-y-10">
 
-<table class="w-full border-collapse">
-<colgroup>
-<col style="width: 24%">
-<col style="width: 32%">
-<col style="width: 44%">
-</colgroup>
-<thead>
-<tr class="border-b-2 border-white/30">
-<th class="text-left py-2 px-3"></th>
-<th class="text-left py-2 px-3 opacity-70 whitespace-nowrap">プロンプトエンジニアリング</th>
-<th class="text-left py-2 px-3 text-cyan-300 whitespace-nowrap">ループエンジニアリング</th>
-</tr>
-</thead>
-<tbody class="leading-snug">
-<tr class="border-b border-white/10">
-<td class="py-2 px-3 font-bold text-green-300">人間が<br>設計するもの</td>
-<td class="py-2 px-3 opacity-80">プロンプト<br><span class="text-xl opacity-70">(1 回の指示文)</span></td>
-<td class="py-2 px-3">ループ全体<br><span class="text-xl opacity-70">(ゴール・検証基準・終了条件・<span class="whitespace-nowrap">実行環境</span>)</span></td>
-</tr>
-<tr class="border-b border-white/10">
-<td class="py-2 px-3 font-bold opacity-60">検証基準</td>
-<td class="py-2 px-3 opacity-80">人間の目視確認</td>
-<td class="py-2 px-3">Test / Lint 等の機械的基準 +<br><strong>AI 自体を判定者として組み込む</strong></td>
-</tr>
-<tr>
-<td class="py-2 px-3 font-bold opacity-60">実行主体</td>
-<td class="py-2 px-3 opacity-80">人間が都度実行</td>
-<td class="py-2 px-3">AI が自律的に反復実行</td>
-</tr>
-</tbody>
-</table>
+<v-clicks>
+
+- 真に AI 活用するには、<span class="whitespace-nowrap">業務フローを分解して</span><br><span class="whitespace-nowrap">それぞれを AI に最適化する必要がある</span>
+- 最近話題の<span class="whitespace-nowrap">"ループエンジニアリング"</span>を<span class="whitespace-nowrap">適用できないか</span>
+
+</v-clicks>
 
 </div>
 </div>
 
 <!--
-出典 (Zenn 記事、The New Stack 等) は口頭で軽く触れる程度、スライドには出さない。
+前スライドの Before/After (面倒さの場所が移動しただけ) を受けて、これは対症療法に過ぎないという流れで問題提起する。
 -->
 
 ---
@@ -192,24 +187,24 @@ layout: full
 <div class="h-full flex flex-col">
 
 <div class="shrink-0">
-<div class="text-4xl font-bold">ループエンジニアリングの定義 3 種 <span class="text-2xl opacity-60">(私見)</span></div>
+<div class="text-5xl font-bold">ループエンジニアリングの定義 3 種<br><span class="text-2xl opacity-60">(私見)</span></div>
 </div>
 
 <div class="flex-1 flex flex-col justify-center space-y-3 mt-2">
 
-<div class="bg-blue-900/30 border border-blue-500/40 rounded-lg px-8 py-4">
-<div class="text-3xl"><strong class="text-blue-300">① 目標達成ループ</strong></div>
-<div class="text-xl opacity-80 mt-2">目標達成まで実装と検証を繰り返すループ</div>
+<div class="bg-green-900/30 border border-green-500/40 rounded-lg px-8 py-4">
+<div class="text-3xl"><strong class="text-green-300">① 目標達成ループ</strong></div>
+<div class="text-2xl opacity-80 mt-2">目標達成まで実装と検証を繰り返すループ</div>
 </div>
 
-<div class="bg-green-900/30 border border-green-500/40 rounded-lg px-8 py-4">
-<div class="text-3xl"><strong class="text-green-300">② 環境改善ループ</strong></div>
-<div class="text-xl opacity-80 mt-2">知識を記録・抽象化し、作業環境自体を改善し続けるループ</div>
+<div class="bg-cyan-900/30 border border-cyan-500/40 rounded-lg px-8 py-4">
+<div class="text-3xl"><strong class="text-cyan-300">② 環境改善ループ</strong></div>
+<div class="text-2xl opacity-80 mt-2">知識を記録・抽象化し、作業環境自体を改善し続けるループ</div>
 </div>
 
 <div class="bg-purple-900/30 border border-purple-500/40 rounded-lg px-8 py-4">
 <div class="text-3xl"><strong class="text-purple-300">③ 問題発見ループ</strong></div>
-<div class="text-xl opacity-80 mt-2">そもそも何を実装すべきかを発見・定義し、<br>目標達成ループに投入するループ</div>
+<div class="text-2xl opacity-80 mt-2">そもそも何を実装すべきかを発見・定義し、<br>目標達成ループに投入するループ</div>
 </div>
 
 </div>
@@ -237,7 +232,7 @@ layout: full
 
 <div class="h-full flex flex-col">
 
-<div class="text-5xl font-bold shrink-0">人間がレビューしやすい UI</div>
+<div class="text-5xl font-bold shrink-0">レビュー自体の妥当性をレビューする</div>
 
 <div class="flex-1 mt-4" style="position: relative;">
   <img src="./assets/review_report.gif" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain;" />
@@ -262,9 +257,9 @@ AI から AI へのフィードバックはテキストのみで、指摘が妥�
 
 <v-clicks>
 
-- スライド作成も AI 時代なら<span class="whitespace-nowrap">「ワークフローとして再設計」できる</span>
 - ルールを書くだけでは AI は逸脱する<br><span class="whitespace-nowrap">検証基準のチューニングという地道な仕事が残る</span>
-- <strong>このスライドも、この方式で作りました</strong>
+- 改行崩れや見切れは検知できるが<br><span class="whitespace-nowrap">演出や言い回しの判断は人間の判断が必要</span>
+- <strong>スライド作成の自動化の道は、まだまだ遠い</strong>
 
 </v-clicks>
 
@@ -273,4 +268,5 @@ AI から AI へのフィードバックはテキストのみで、指摘が妥�
 
 <!--
 動線 (Zenn 記事等) は現時点でなし。今後記事化する場合は別途追加。
+「このスライドも、この方式で作りました」は口頭で補足する (伏線回収)。
 -->
